@@ -96,7 +96,7 @@ body::before {
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.64;
+  opacity: 0.72;
   mask-image: linear-gradient(to bottom, black 0%, black 58%, transparent 96%);
 }
 
@@ -107,39 +107,21 @@ body::before {
 }
 
 .three-background.three-fallback {
-  opacity: 0.34;
+  opacity: 0.56;
 }
 
-.fallback-cube {
+.fallback-dot-field {
   position: absolute;
-  display: block;
-  width: 150px;
-  height: 150px;
-  transform: rotate(30deg) skew(-8deg, -8deg);
-  border: 1px solid var(--line-strong);
-  box-shadow:
-    28px 28px 0 -1px transparent,
-    28px 28px 0 0 var(--line);
+  inset: 0;
 }
 
-.fallback-cube::before,
-.fallback-cube::after {
+.fallback-dot {
   position: absolute;
-  content: "";
-  border: 1px solid var(--line);
-}
-
-.fallback-cube::before {
-  inset: 24px;
-}
-
-.fallback-cube::after {
-  inset: 50px;
-}
-
-.cube-one { top: 13%; right: 9%; }
-.cube-two { top: 54%; left: 12%; width: 92px; height: 92px; }
-.cube-three { top: 68%; right: 28%; width: 66px; height: 66px; }
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 9px color-mix(in srgb, var(--blue) 55%, transparent);
 }
 
 .site-header,
