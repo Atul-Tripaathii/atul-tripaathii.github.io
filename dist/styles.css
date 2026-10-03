@@ -434,6 +434,20 @@ a {
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.36));
 }
 
+.signal-logo .signal-portrait {
+  width: clamp(150px, 15vw, 180px);
+  height: clamp(172px, 17vw, 210px);
+  object-fit: cover;
+  object-position: 50% 22%;
+  border: 1px solid var(--line-strong);
+  border-radius: 24px;
+  background: var(--surface-soft);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.38),
+    0 0 0 7px color-mix(in srgb, var(--surface) 58%, transparent);
+  filter: saturate(0.88) contrast(1.02);
+}
+
 .signal-role {
   position: relative;
   z-index: 1;
