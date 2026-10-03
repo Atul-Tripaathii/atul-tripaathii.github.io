@@ -73,6 +73,18 @@ const renderProjects = (filter = "All") => {
   observeReveals();
 };
 
+const renderProjectFilters = () => {
+  const filters = ["All", ...new Set(content.projects.map((project) => project.category))];
+  document.querySelector("#project-filters").innerHTML = filters
+    .map(
+      (filter, index) => `
+        <button class="filter-button${index === 0 ? " is-active" : ""}" type="button" data-filter="${escapeHTML(filter)}">
+          ${filter === "All" ? "All work" : escapeHTML(filter)}
+        </button>`,
+    )
+    .join("");
+};
+
 const renderSkills = () => {
   document.querySelector("#skills-grid").innerHTML = content.skillGroups
     .map(
@@ -187,7 +199,9 @@ const hydrateProfile = () => {
   document.querySelectorAll("[data-profile='name']").forEach((el) => (el.textContent = profile.name));
   document.querySelectorAll("[data-profile='shortName']").forEach((el) => (el.textContent = profile.shortName));
   document.querySelectorAll("[data-profile='email']").forEach((el) => {
-    el.textContent = profile.email;
+    const label = el.querySelector("[data-profile-email-label]");
+    if (label) label.textContent = profile.email;
+    else el.textContent = profile.email;
     if (el.tagName === "A") el.href = `mailto:${profile.email}`;
   });
   document.querySelector("#hero-headline").textContent = profile.headline;
@@ -306,6 +320,7 @@ const setupUtilities = () => {
 hydrateProfile();
 renderProof();
 renderProjects();
+renderProjectFilters();
 renderSkills();
 renderExperience();
 renderEducation();

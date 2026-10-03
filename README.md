@@ -4,9 +4,9 @@ A responsive, recruiter-focused portfolio built with plain HTML, CSS, JavaScript
 
 ## What is included
 
-- Animated Three.js background made from instanced 3D box geometry
-- Wireframe and translucent cubes with depth, drift, rotation, and pointer parallax
-- CSS geometric fallback when WebGL is unavailable
+- Cursor-reactive Three.js particle constellation background
+- Nearby particles form temporary geometric connections in a restrained silver palette
+- Lightweight dot fallback when WebGL is unavailable
 - Reduced-motion support for accessibility
 - Dark and light themes with a restrained graphite-and-steel palette
 - Self-hosted IBM Plex Mono and Manrope fonts
@@ -26,7 +26,7 @@ A responsive, recruiter-focused portfolio built with plain HTML, CSS, JavaScript
 │   ├── content.js                      # Portfolio data you will update
 │   ├── app.js                          # Rendering and interactions
 │   ├── styles.css                      # Complete visual system
-│   ├── three-scene.js                  # Three.js cube animation
+│   ├── three-scene.js                  # Three.js particle constellation
 │   ├── assets/                         # Logo, résumé, and fonts
 │   └── vendor/                         # Self-hosted Three.js modules
 └── README.md
@@ -50,6 +50,31 @@ experience: [
 ```
 
 Project and certification records support an optional `link`. Use an empty string to hide the action until you have a repository, demo, or credential URL.
+
+### Add another project
+
+Add a new object inside the `projects` array in `dist/content.js`, after the previous project and before the closing `]`:
+
+```js
+{
+  id: "project-slug",
+  category: "Generative AI",
+  title: "Project name",
+  subtitle: "One-line description",
+  dates: "Apr 2026 — May 2026",
+  problem: "Describe the real problem the project addresses.",
+  solution: "Explain what you designed and built.",
+  impact: [
+    "Add one honest, measurable outcome",
+    "Add another tested result or engineering decision",
+  ],
+  stack: ["Python", "FastAPI", "Your tools"],
+  accent: "lime",
+  link: "https://github.com/your-account/project",
+},
+```
+
+Use `Generative AI` or `Computer Vision` to place it under an existing filter. A new category such as `Machine Learning` automatically creates a new filter button. Keep `id` unique, use only `lime` or `blue` for `accent`, and leave `link` empty until the repository or demo is ready.
 
 ## Run locally
 

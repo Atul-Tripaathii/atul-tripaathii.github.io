@@ -17,7 +17,7 @@ window.PORTFOLIO_CONTENT = {
   },
 
   proof: [
-    { value: "0%", label: "hallucination rate in evaluated RAG queries" },
+    { value: "Grounded", label: "RAG responses backed by retrieved source passages" },
     { value: "30 FPS", label: "football analysis pipeline throughput" },
     { value: "Top 3.2%", label: "GATE 2025 performance" },
   ],
@@ -36,7 +36,7 @@ window.PORTFOLIO_CONTENT = {
       impact: [
         "Indexed 10+ documents into 800-character chunks in under 2 minutes",
         "Retrieved the top 4 relevant chunks using cosine similarity",
-        "Recorded 0% hallucination rate in the evaluated set and 40% faster responses than full-document prompting",
+        "Added retrieval and response checks to reduce unsupported answers",
         "Shipped a compact Gradio interface that runs without an API key or internet connection",
       ],
       stack: ["Python", "LangChain", "Llama 3.2", "Ollama", "ChromaDB", "Gradio", "PyPDF"],
