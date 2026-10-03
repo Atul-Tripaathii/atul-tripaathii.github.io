@@ -210,9 +210,11 @@ a {
   letter-spacing: -0.035em;
 }
 
-.brand > [data-profile="name"] {
-  font-size: 1.08rem;
-  letter-spacing: -0.025em;
+.brand-name {
+  font-size: clamp(1.2rem, 1.45vw, 1.36rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.035em;
 }
 
 .brand-logo-wrap {
@@ -1091,6 +1093,20 @@ details li + li {
   font: 800 0.75rem/1 var(--mono);
 }
 
+.cert-logo {
+  width: 68px;
+  padding: 0.65rem;
+  background: color-mix(in srgb, var(--bg-elevated) 72%, transparent);
+}
+
+.cert-logo img {
+  display: block;
+  width: 100%;
+  max-height: 27px;
+  object-fit: contain;
+  filter: saturate(0.72) brightness(0.92);
+}
+
 .cert-card strong,
 .cert-card small {
   display: block;
@@ -1171,6 +1187,20 @@ details li + li {
   color: var(--muted);
   background: transparent;
   cursor: pointer;
+}
+
+.contact-direct .contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.contact-email svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  fill: currentColor;
+  opacity: 0.82;
 }
 
 .contact-direct a:hover,

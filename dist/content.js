@@ -136,19 +136,19 @@ window.PORTFOLIO_CONTENT = {
       title: "Agentic AI Foundation",
       issuer: "Oracle",
       link: "",
-      mark: "OR",
+      logo: "assets/oracle-logo.svg",
     },
     {
       title: "Machine Learning Specialization",
       issuer: "Coursera · Andrew Ng",
       link: "",
-      mark: "ML",
+      logo: "assets/coursera-logo.svg",
     },
     {
       title: "Divide and Conquer Algorithms",
       issuer: "Coursera · Stanford",
       link: "",
-      mark: "DC",
+      logo: "assets/coursera-logo.svg",
     },
   ],
 

@@ -167,8 +167,11 @@ const renderEducation = () => {
 const renderCredentials = () => {
   document.querySelector("#certifications-grid").innerHTML = content.certifications
     .map((item, index) => {
+      const identity = item.logo
+        ? `<span class="cert-mark cert-logo"><img src="${escapeHTML(item.logo)}" alt="" /></span>`
+        : `<span class="cert-mark">${escapeHTML(item.mark)}</span>`;
       const body = `
-        <span class="cert-mark">${escapeHTML(item.mark)}</span>
+        ${identity}
         <span>
           <strong>${escapeHTML(item.title)}</strong>
           <small>${escapeHTML(item.issuer)}</small>
