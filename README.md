@@ -95,7 +95,7 @@ Every later push to `main` or `master` automatically publishes the latest `dist/
 
 ## Contact form activation
 
-The contact form uses FormSubmit's free email relay. The first real submission triggers a one-time activation email at `cs25m251@iittp.ac.in`. Confirm that email once; later portfolio messages will arrive in the same inbox.
+The contact form uses FormSubmit's free email relay. The first real submission triggers a one-time activation email at `atultripaathii@gmail.com`. Confirm that email once; later portfolio messages will arrive in the same inbox.
 
 No FormSubmit password or API key is stored in this repository. If you change your email in `dist/content.js`, activate the new address through FormSubmit again.
 

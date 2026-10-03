@@ -6,7 +6,7 @@ window.PORTFOLIO_CONTENT = {
     shortName: "AT",
     role: "AI & Machine Learning Engineer",
     location: "Tirupati, India",
-    email: "cs25m251@iittp.ac.in",
+    email: "atultripaathii@gmail.com",
     github: "https://github.com/Atul-Tripaaathi",
     linkedin: "https://www.linkedin.com/in/halfcodeblood/",
     resume: "assets/Atul-Tripathi-Resume.pdf",
