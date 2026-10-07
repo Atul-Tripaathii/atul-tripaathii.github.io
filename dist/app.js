@@ -176,7 +176,7 @@ const renderCredentials = () => {
           <strong>${escapeHTML(item.title)}</strong>
           <small>${escapeHTML(item.issuer)}</small>
         </span>
-        <span class="cert-status">Verified on request</span>`;
+        <span class="cert-status${item.statusTone ? ` is-${escapeHTML(item.statusTone)}` : ""}">${escapeHTML(item.status || "Verified on request")}</span>`;
       return item.link
         ? `<a class="cert-card reveal" href="${escapeHTML(item.link)}" target="_blank" rel="noreferrer" style="--delay:${index * 75}ms">${body}</a>`
         : `<article class="cert-card reveal" style="--delay:${index * 75}ms">${body}</article>`;

@@ -4,16 +4,16 @@ window.PORTFOLIO_CONTENT = {
   profile: {
     name: "Atul Tripathi",
     shortName: "AT",
-    role: "AI & Machine Learning Engineer",
+    role: "Data Scientist · Applied AI",
     location: "Tirupati, India",
     email: "atultripaathii@gmail.com",
     github: "https://github.com/Atul-Tripaaathi",
     linkedin: "https://www.linkedin.com/in/halfcodeblood/",
     resume: "assets/Atul-Tripathi-Resume.pdf",
-    availability: "Open to work",
-    headline: "I turn research problems into working AI systems.",
+    availability: "Incoming Associate Consultant · Virtusa · Jan 2027",
+    headline: "I turn data into decisions — and models into dependable systems.",
     intro:
-      "M.Tech (DSAI) candidate at IIT Tirupati building grounded LLM applications and computer-vision pipelines that are measurable, explainable, and useful beyond the notebook.",
+      "Incoming Associate Consultant at Virtusa and M.Tech (DSAI) candidate at IIT Tirupati, focused on statistical modelling, machine learning, and production-minded AI — with applied work in RAG and computer vision.",
   },
 
   proof: [
@@ -67,28 +67,36 @@ window.PORTFOLIO_CONTENT = {
 
   skillGroups: [
     {
-      label: "AI / Language",
-      note: "Grounded generation and local inference",
-      items: ["LLMs", "RAG", "Prompt Engineering", "LangChain", "ChromaDB", "Ollama"],
+      label: "Data Science / Statistics",
+      note: "From exploration to defensible decisions",
+      items: ["Python", "SQL", "Statistics", "Probability", "EDA", "Feature Engineering", "Pandas"],
     },
     {
-      label: "Computer Vision",
-      note: "Detection, tracking, and motion analysis",
-      items: ["OpenCV", "YOLOv5", "Optical Flow", "Perspective Transform", "K-Means"],
+      label: "Machine Learning",
+      note: "Model development, evaluation, and interpretation",
+      items: ["Regression", "Classification", "Clustering", "Cross-validation", "Model Evaluation", "scikit-learn", "NumPy"],
     },
     {
-      label: "ML / Data",
-      note: "From data preparation to model evaluation",
-      items: ["scikit-learn", "NumPy", "Pandas", "Matplotlib", "Seaborn", "Hugging Face"],
+      label: "Applied AI",
+      note: "NLP, retrieval, and computer-vision systems",
+      items: ["LLMs", "RAG", "LangChain", "Hugging Face", "ChromaDB", "OpenCV", "YOLOv5"],
     },
     {
       label: "Engineering",
-      note: "Tools used to ship and communicate work",
-      items: ["Python", "C++", "C", "SQL", "JavaScript", "HTML", "CSS", "Git", "GitHub"],
+      note: "Tools used to package and communicate work",
+      items: ["Git", "GitHub", "Gradio", "Matplotlib", "Seaborn", "JavaScript", "HTML", "CSS", "C++", "C"],
     },
   ],
 
-  experience: [],
+  experience: [
+    {
+      role: "Associate Consultant (Incoming)",
+      organization: "Virtusa",
+      dates: "Joining January 2027",
+      summary:
+        "Selected to join Virtusa as an Associate Consultant, with an intended growth path across data science, machine learning, and applied AI through training and client delivery.",
+    },
+  ],
 
   leadership: [
     {
@@ -137,18 +145,37 @@ window.PORTFOLIO_CONTENT = {
       issuer: "Oracle",
       link: "",
       logo: "assets/oracle-logo.svg",
+      status: "Verified on request",
     },
     {
       title: "Machine Learning Specialization",
       issuer: "Coursera · Andrew Ng",
       link: "",
       logo: "assets/coursera-logo.svg",
+      status: "Verified on request",
     },
     {
       title: "Divide and Conquer Algorithms",
       issuer: "Coursera · Stanford",
       link: "",
       logo: "assets/coursera-logo.svg",
+      status: "Verified on request",
+    },
+    {
+      title: "Complete Data Science, Machine Learning, Deep Learning & NLP Bootcamp",
+      issuer: "Udemy · Krish Naik",
+      link: "",
+      mark: "U",
+      status: "In progress · Expected Dec 2026",
+      statusTone: "progress",
+    },
+    {
+      title: "Complete Python with DSA Bootcamp + LeetCode Exercises",
+      issuer: "Udemy · Krish Naik & Mayank Aggarwal",
+      link: "",
+      mark: "U",
+      status: "In progress · Expected Dec 2026",
+      statusTone: "progress",
     },
   ],
 
