@@ -1,137 +1,110 @@
-# Atul Tripathi — AI/ML Portfolio
+# Atul Tripathi — Portfolio
 
-A responsive, recruiter-focused portfolio built with plain HTML, CSS, JavaScript, and a lightweight Three.js WebGL scene. It requires no package installation or build command.
+This repository contains the code for my personal portfolio: [atul-tripaathii.github.io](https://atul-tripaathii.github.io/).
 
-## What is included
+I am currently pursuing an M.Tech in Data Science and Artificial Intelligence at IIT Tirupati. I will be joining Virtusa as an Associate Consultant in January 2027, and I am working towards a career in data science and applied machine learning. I also enjoy building with generative AI, retrieval systems, and computer vision when they are the right fit for a problem.
 
-- Cursor-reactive Three.js particle constellation background
-- Nearby particles form temporary geometric connections in a restrained silver palette
-- Lightweight dot fallback when WebGL is unavailable
-- Reduced-motion support for accessibility
-- Dark and light themes with a restrained graphite-and-steel palette
-- Self-hosted IBM Plex Mono and Manrope fonts
-- Projects, skills, experience, education, certifications, and achievements
-- Downloadable résumé
-- Responsive navigation and layouts
-- Contact form powered by FormSubmit
-- Automatic GitHub Pages deployment workflow
+I built this site to keep my work, skills, education, and credentials in one place. I wanted it to feel personal and easy to explore without depending on a large framework or a complicated build process.
+
+## What you will find here
+
+- Selected projects with the problem, approach, tools, and measured results
+- A skills section centred on data science, statistics, machine learning, and applied AI
+- My incoming role at Virtusa, along with education and leadership experience
+- Completed credentials and courses that are currently in progress
+- My résumé, social profiles, and a contact form
+- A cursor-responsive Three.js particle background with a simpler fallback for unsupported devices
+
+I am currently working through Krish Naik's Data Science/ML/DL/NLP bootcamp and the Python with DSA bootcamp on Udemy. They are marked as **in progress** on the website and will be updated with certificate links after completion.
 
 ## Project structure
 
 ```text
 .
-├── .github/workflows/deploy-pages.yml  # Automatic GitHub Pages deployment
+├── .github/workflows/deploy-pages.yml  # GitHub Pages deployment
 ├── dist/
 │   ├── index.html                      # Page structure and metadata
-│   ├── content.js                      # Portfolio data you will update
+│   ├── content.js                      # Profile and portfolio content
 │   ├── app.js                          # Rendering and interactions
-│   ├── styles.css                      # Complete visual system
-│   ├── three-scene.js                  # Three.js particle constellation
-│   ├── assets/                         # Logo, résumé, and fonts
-│   └── vendor/                         # Self-hosted Three.js modules
+│   ├── styles.css                      # Layout, themes, and responsive styles
+│   ├── three-scene.js                  # Interactive particle background
+│   ├── assets/                         # Portrait, logos, résumé, and fonts
+│   └── vendor/                         # Local Three.js files
 └── README.md
 ```
 
-## Update your content
+## Updating the portfolio
 
-Most future edits only require changing [`dist/content.js`](dist/content.js). It contains your profile, links, projects, technical skills, experience, leadership, education, certifications, and achievements.
+Most content changes can be made in [`dist/content.js`](dist/content.js). The profile, project cards, skills, experience, education, certifications, and achievements all live there.
 
-The `experience` array is intentionally ready for your first company role. Add a record in this format:
+For example, a new professional role can be added like this:
 
 ```js
-experience: [
-  {
-    role: "Machine Learning Engineer",
-    organization: "Company Name",
-    dates: "2027 — Present",
-    summary: "Describe the product, your contribution, and a measurable result.",
-  },
-],
+{
+  role: "Data Scientist",
+  organization: "Company name",
+  dates: "2027 — Present",
+  summary: "Explain what you worked on, what you contributed, and what changed as a result.",
+}
 ```
 
-Project and certification records support an optional `link`. Use an empty string to hide the action until you have a repository, demo, or credential URL.
+### Adding a project
 
-### Add another project
-
-Add a new object inside the `projects` array in `dist/content.js`, after the previous project and before the closing `]`:
+Add another object to the `projects` array in `dist/content.js`:
 
 ```js
 {
   id: "project-slug",
-  category: "Generative AI",
+  category: "Machine Learning",
   title: "Project name",
-  subtitle: "One-line description",
-  dates: "Apr 2026 — May 2026",
-  problem: "Describe the real problem the project addresses.",
-  solution: "Explain what you designed and built.",
+  subtitle: "A short description of the project",
+  dates: "Month Year — Month Year",
+  problem: "What problem were you trying to solve?",
+  solution: "What did you build and why did you choose that approach?",
   impact: [
-    "Add one honest, measurable outcome",
-    "Add another tested result or engineering decision",
+    "An honest result that you measured",
+    "Another useful finding or engineering outcome",
   ],
-  stack: ["Python", "FastAPI", "Your tools"],
-  accent: "lime",
+  stack: ["Python", "Pandas", "scikit-learn"],
+  accent: "blue",
   link: "https://github.com/your-account/project",
-},
+}
 ```
 
-Use `Generative AI` or `Computer Vision` to place it under an existing filter. A new category such as `Machine Learning` automatically creates a new filter button. Keep `id` unique, use only `lime` or `blue` for `accent`, and leave `link` empty until the repository or demo is ready.
+The category also becomes a project filter. Keep each `id` unique, use either `blue` or `lime` for the accent, and leave `link` empty until the repository or demo is ready.
 
-## Run locally
+## Running it locally
 
-From the repository directory:
+No packages need to be installed. From the repository folder, run:
 
 ```bash
 python3 -m http.server 4173 --directory dist
 ```
 
-Open [http://localhost:4173](http://localhost:4173). A local server is required because the Three.js scene uses JavaScript modules.
+Then open [http://localhost:4173](http://localhost:4173). A local server is needed because the Three.js background loads through JavaScript modules.
 
-## Publish free with GitHub Pages
+## Publishing changes
 
-### 1. Create the repository
-
-Create a new empty repository on GitHub. Choose one naming pattern:
-
-- `Atul-Tripaaathi.github.io` for `https://Atul-Tripaaathi.github.io/`
-- Any other name, such as `portfolio`, for `https://Atul-Tripaaathi.github.io/portfolio/`
-
-Do not initialize the GitHub repository with another README because this project already contains one.
-
-### 2. Push this project
-
-Replace `<repository-name>` below with the repository you created:
+The site is hosted with GitHub Pages. After editing the files, I publish an update with:
 
 ```bash
-git remote add origin https://github.com/Atul-Tripaaathi/<repository-name>.git
-git branch -M main
-git push -u origin main
+git add dist README.md
+git commit -m "Update portfolio content"
+git pull --rebase origin main
+git push origin main
 ```
 
-### 3. Enable GitHub Pages
+The workflow in `.github/workflows/deploy-pages.yml` publishes the `dist` folder automatically. The deployment progress can be checked in the repository's **Actions** tab.
 
-In the GitHub repository:
+## Contact form
 
-1. Open **Settings → Pages**.
-2. Under **Build and deployment**, select **GitHub Actions** as the source.
-3. Open the **Actions** tab and wait for “Deploy portfolio to GitHub Pages” to finish.
-4. Open the deployment URL shown in the workflow summary.
+The form uses FormSubmit and sends messages to `atultripaathii@gmail.com`. FormSubmit sends a confirmation email the first time the address is used. After that one-time confirmation, new messages from the portfolio arrive in the same inbox.
 
-Every later push to `main` or `master` automatically publishes the latest `dist/` folder.
+No password or API key is included in this repository.
 
-## Contact form activation
+## Built with
 
-The contact form uses FormSubmit's free email relay. The first real submission triggers a one-time activation email at `atultripaathii@gmail.com`. Confirm that email once; later portfolio messages will arrive in the same inbox.
-
-No FormSubmit password or API key is stored in this repository. If you change your email in `dist/content.js`, activate the new address through FormSubmit again.
-
-## Optional custom domain
-
-GitHub's free `github.io` address works immediately. If you later buy a custom domain, add it under **Settings → Pages → Custom domain** and follow GitHub's DNS instructions. Do not add a `CNAME` file until you know the exact domain.
-
-## Technology
-
-- Semantic HTML5
-- Modern responsive CSS
-- Vanilla JavaScript
-- Three.js 0.186.1, vendored locally
+- HTML, CSS, and vanilla JavaScript
+- Three.js for the interactive background
+- Self-hosted IBM Plex Mono and Manrope fonts
 - GitHub Actions and GitHub Pages
